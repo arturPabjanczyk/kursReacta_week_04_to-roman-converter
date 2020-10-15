@@ -1,4 +1,4 @@
-import {cleanup, render} from "@testing-library/react";
+import {cleanup, fireEvent, render} from "@testing-library/react";
 import React from "react";
 import RomanConverter from "./RomanConverter";
 
@@ -15,6 +15,13 @@ describe('<RomanConverter />', () => {
         const {getByText} = render(<RomanConverter />)
         expect(() => {
             getByText("Roman: none")
+        }).not.toThrow();
+    });
+    it('should convert 1 to I', function () {
+        const {getByLabelText, getByText} = render(<RomanConverter />)
+        fireEvent.change(getByLabelText(/arabic/i), {target: {value: "1"}});
+        expect(() => {
+            getByText("Roman: I")
         }).not.toThrow();
     });
 })
