@@ -31,4 +31,11 @@ describe('<RomanConverter />', () => {
             getByText("Roman: V")
         }).not.toThrow();
     });
+    it('should not convert 0 to any roman number', function () {
+        const {getByLabelText, getByText} = render(<RomanConverter />)
+        fireEvent.change(getByLabelText(/arabic/i), {target: {value: "0"}});
+        expect(() => {
+            getByText("Roman: none")
+        }).not.toThrow();
+    });
 })
