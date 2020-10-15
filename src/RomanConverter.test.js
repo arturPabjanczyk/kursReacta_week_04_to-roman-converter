@@ -24,4 +24,11 @@ describe('<RomanConverter />', () => {
             getByText("Roman: I")
         }).not.toThrow();
     });
+    it('should convert 5 to V', function () {
+        const {getByLabelText, getByText} = render(<RomanConverter />)
+        fireEvent.change(getByLabelText(/arabic/i), {target: {value: "5"}});
+        expect(() => {
+            getByText("Roman: V")
+        }).not.toThrow();
+    });
 })
