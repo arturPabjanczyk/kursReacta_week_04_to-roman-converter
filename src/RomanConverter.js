@@ -5,9 +5,12 @@ class RomanConverter extends React.Component {
         roman: null
     }
     handleChange = (event) => {
-        this.setState({
-            roman: "I"
-        })
+        const arabic = event.target.value;
+        let roman = "I";
+        if (arabic == 5) {
+            roman = "V"
+        }
+        this.setState({roman})
     }
 
     render() {
