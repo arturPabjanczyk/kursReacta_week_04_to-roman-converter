@@ -1,6 +1,12 @@
 import {cleanup, render} from "@testing-library/react";
 import React from "react";
 
+class RomanConverter extends React.Component {
+    render() {
+        return <label>arabic<input/></label>;
+    }
+}
+
 describe('<RomanConverter />', () => {
     afterEach(cleanup)
 
