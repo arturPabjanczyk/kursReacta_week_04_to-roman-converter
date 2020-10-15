@@ -1,4 +1,5 @@
 import React from "react";
+import {toRoman} from "../lib/converters"
 
 class RomanConverter extends React.Component {
     state = {
@@ -6,14 +7,7 @@ class RomanConverter extends React.Component {
     }
     handleChange = (event) => {
         const arabic = event.target.value;
-        let roman = "none";
-        if (arabic == 5) {
-            roman = "V"
-        }
-        if (arabic == 1) {
-            roman = "I"
-        }
-        this.setState({roman})
+        this.setState({roman: toRoman(arabic)})
     }
 
     render() {

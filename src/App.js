@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-import RomanConverter from "./RomanConverter";
+import RomanConverter from "./components/RomanConverter";
 
 function App() {
     return (
