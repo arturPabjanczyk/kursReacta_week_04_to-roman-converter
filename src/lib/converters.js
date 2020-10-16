@@ -14,6 +14,9 @@ function toRoman(arabic) {
     if (arabic == 9) {
         roman = "IX"
     }
+    if (arabic == 10) {
+        roman = "X"
+    }
     return roman;
 }
 
