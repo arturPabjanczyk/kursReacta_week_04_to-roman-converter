@@ -1,4 +1,4 @@
-import {toRoman} from "../../lib/converters"
+import {toArabic, toRoman} from "../../lib/converters"
 
 describe('toRoman()', () => {
     it.each([
@@ -6,5 +6,12 @@ describe('toRoman()', () => {
         [90, "XC"],[100, "C"],[400, "CD"],[500, "D"],[900, "CM"],[1000, "M"], [2019, "MMXIX"], [-1, "none"]
     ])('should  convert %d to %s', (arabic, expectedRoman) => {
         expect(toRoman(arabic)).toEqual(expectedRoman)
+    });
+})
+describe('toArabic<90', () => {
+    it.each([
+        ["I", 1], ["V", 5]
+    ])('should convert %s to %d', (roman, expectedArabic) => {
+        expect(toArabic(roman)).toEqual(expectedArabic)
     });
 })

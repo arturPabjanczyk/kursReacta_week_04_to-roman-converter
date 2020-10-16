@@ -21,4 +21,12 @@ function toRoman(arabic) {
     return roman;
 }
 
-export {toRoman};
+function toArabic(roman) {
+    let arabic = 1;
+    if (roman === "V") {
+        arabic = 5
+    }
+    return arabic;
+}
+
+export {toRoman, toArabic};

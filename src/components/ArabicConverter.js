@@ -1,14 +1,14 @@
 import React from "react";
+import {toArabic} from "../lib/converters"
 
 class ArabicConverter extends React.Component {
     state = {
         arabic: null
     }
     handleChange = (event) => {
-        this.setState({
-            arabic: 1
-        })
+        this.setState({arabic: toArabic(event.target.value)})
     }
+
     render() {
         return (
             <>
