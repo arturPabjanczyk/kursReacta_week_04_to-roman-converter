@@ -1,4 +1,3 @@
-
 function toRoman(arabic) {
     let roman = "none";
 
@@ -19,6 +18,9 @@ function toRoman(arabic) {
     }
     if (arabic == 40) {
         roman = "XL"
+    }
+    if (arabic == 50) {
+        roman = "L"
     }
     return roman;
 }
