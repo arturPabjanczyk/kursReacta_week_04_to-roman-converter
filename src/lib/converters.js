@@ -6,7 +6,7 @@ function toRoman(arabic) {
     const romanSymbolsSorted = [...romanSymbols].sort((a, b) => b[0] - a[0])
     let roman = "";
     let i = 0;
-    if (arabic === 0) {
+    if (arabic <= 0) {
         return "none";
     }
     while (arabic > 0 && i < romanSymbolsSorted.length) {
