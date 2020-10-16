@@ -22,6 +22,9 @@ function toRoman(arabic) {
     if (arabic == 50) {
         roman = "L"
     }
+    if (arabic == 90) {
+        roman = "XC"
+    }
     return roman;
 }
 
