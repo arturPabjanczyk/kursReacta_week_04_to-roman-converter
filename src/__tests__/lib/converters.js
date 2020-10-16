@@ -10,7 +10,7 @@ describe('toRoman()', () => {
 })
 describe('toArabic<90', () => {
     it.each([
-        ["I", 1], ["V", 5], ["X", 10]
+        ["I", 1], ["V", 5], ["X", 10], ["L", 50]
     ])('should convert %s to %d', (roman, expectedArabic) => {
         expect(toArabic(roman)).toEqual(expectedArabic)
     });
