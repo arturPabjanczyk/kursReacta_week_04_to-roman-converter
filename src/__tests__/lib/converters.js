@@ -4,7 +4,7 @@ describe('toRoman()', () => {
     it('should not convert 0 to any roman number', function () {
         expect(toRoman(0)).toEqual("none")
     });
-    xit('should convert 2019 to MMXIX', function () {
+    it('should convert 2019 to MMXIX', function () {
         expect(toRoman(2019)).toEqual("MMXIX")
     });
 });
