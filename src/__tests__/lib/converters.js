@@ -11,6 +11,7 @@ describe('toRoman()', () => {
 describe('toRoman()', () => {
     it.each([
         [1, "I"],
+        [4, "IV"],
         [5, "V"]
     ])('should  convert %d to %s', (arabic, expectedRoman) => {
         expect(toRoman(arabic)).toEqual(expectedRoman)
