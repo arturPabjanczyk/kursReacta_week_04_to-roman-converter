@@ -38,6 +38,9 @@ function toArabic(roman) {
     if (roman === "D") {
         arabic = 500
     }
+    if (roman === "M") {
+        arabic = 1000
+    }
     return arabic;
 }
 
