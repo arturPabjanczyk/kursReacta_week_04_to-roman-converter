@@ -26,6 +26,9 @@ function toArabic(roman) {
     if (roman === "V") {
         arabic = 5
     }
+    if (roman === "X") {
+        arabic = 10
+    }
     return arabic;
 }
 
