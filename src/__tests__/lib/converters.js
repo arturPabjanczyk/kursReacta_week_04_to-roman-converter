@@ -11,6 +11,7 @@ describe('toRoman()', () => {
 describe('toRoman()', () => {
     it.each([
         [1, "I"],
+        [2, "II"],
         [4, "IV"],
         [5, "V"],
         [9, "IX"],
