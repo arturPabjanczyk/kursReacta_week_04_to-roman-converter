@@ -21,6 +21,7 @@ describe('toRoman()', () => {
         [100, "C"],
         [400, "CD"],
         [500, "D"],
+        [900, "CM"]
     ])('should  convert %d to %s', (arabic, expectedRoman) => {
         expect(toRoman(arabic)).toEqual(expectedRoman)
     });
