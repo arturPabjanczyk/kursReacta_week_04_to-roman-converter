@@ -11,6 +11,9 @@ function toRoman(arabic) {
     if (arabic == 5) {
         roman = "V"
     }
+    if (arabic == 9) {
+        roman = "IX"
+    }
     return roman;
 }
 
