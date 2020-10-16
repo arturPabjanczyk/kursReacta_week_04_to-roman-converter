@@ -34,6 +34,9 @@ function toRoman(arabic) {
     if (arabic == 500) {
         roman = "D"
     }
+    if (arabic == 900) {
+        roman = "CM"
+    }
     return roman;
 }
 
