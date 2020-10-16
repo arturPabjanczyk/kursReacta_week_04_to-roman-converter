@@ -28,6 +28,9 @@ function toRoman(arabic) {
     if (arabic == 100) {
         roman = "C"
     }
+    if (arabic == 400) {
+        roman = "CD"
+    }
     return roman;
 }
 
