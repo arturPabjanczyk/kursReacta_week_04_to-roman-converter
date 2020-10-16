@@ -2,7 +2,13 @@ import React from "react";
 
 class ArabicConverter extends React.Component {
     render() {
-        return <label>Roman: <input/></label>;
+        return (
+            <>
+                <label>Roman: <input/></label>
+                <h1>Arabic: none</h1>
+            </>
+        )
+
     }
 }
 

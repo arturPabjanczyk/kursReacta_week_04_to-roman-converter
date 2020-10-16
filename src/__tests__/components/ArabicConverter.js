@@ -10,4 +10,10 @@ describe('<ArabicConverter />', () => {
             getByLabelText(/roman/i)
         }).not.toThrow();
     });
+    it('should show no arabic number by default', function () {
+        const {getByText} = render(<ArabicConverter />)
+        expect(() => {
+            getByText("Arabic: none")
+        }).not.toThrow();
+    });
 })
