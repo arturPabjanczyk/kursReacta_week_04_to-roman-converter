@@ -17,4 +17,10 @@ describe('<RomanNumbersAdder />', () => {
             getByLabelText(/roman 2/i)
         }).not.toThrow();
     });
+    it('should show no result by default', function () {
+        const {getByText} = render(<RomanNumbersAdder />)
+        expect(() => {
+            getByText("Result: none")
+        }).not.toThrow();
+    });
 })
