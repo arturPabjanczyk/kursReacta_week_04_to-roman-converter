@@ -11,4 +11,10 @@ describe('<RomanNumbersAdder />', () => {
             getByLabelText(/roman 1/i)
         }).not.toThrow();
     });
+    it('should have input for second roman number', function () {
+        const {getByLabelText} = render(<RomanNumbersAdder />)
+        expect(() => {
+            getByLabelText(/roman 2/i)
+        }).not.toThrow();
+    });
 })
