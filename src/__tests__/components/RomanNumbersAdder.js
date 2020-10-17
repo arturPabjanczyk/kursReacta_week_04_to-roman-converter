@@ -39,4 +39,13 @@ describe('<RomanNumbersAdder />', () => {
             getByText("Result: L")
         }).not.toThrow();
     });
+    it('should show LI in result when first number is I and second number is L', function () {
+        const {getByLabelText, getByText} = render(<RomanNumbersAdder />)
+        fireEvent.change(getByLabelText(/roman 1/i), {target: {value: "I"}});
+        fireEvent.change(getByLabelText(/roman 2/i), {target: {value: null}});
+        fireEvent.change(getByLabelText(/roman 2/i), {target: {value: "L"}});
+        expect(() => {
+            getByText("Result: LI")
+        }).not.toThrow();
+    });
 })

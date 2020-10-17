@@ -49,4 +49,8 @@ function isRoman(roman) {
     return (new RegExp("^M{0,3}(CM|CD|D?C{0,3})(XC|XL|L?X{0,3})(IX|IV|V?I{0,3})$")).test(roman);
 }
 
-export {toRoman, toArabic};
+function addTwoRomans(number_1, number_2) {
+    return toRoman(toArabic(number_1) + toArabic(number_2));
+}
+
+export {addTwoRomans, isRoman, toRoman, toArabic};
