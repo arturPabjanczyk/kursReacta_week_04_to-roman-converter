@@ -31,4 +31,12 @@ describe('<RomanNumbersAdder />', () => {
             getByText("Result: I")
         }).not.toThrow();
     });
+    it('should show L in result when L entered as second number and first is empty', function () {
+        const {getByLabelText, getByText} = render(<RomanNumbersAdder />)
+        fireEvent.change(getByLabelText(/roman 2/i), {target: {value: "L"}});
+        fireEvent.change(getByLabelText(/roman 1/i), {target: {value: null}});
+        expect(() => {
+            getByText("Result: L")
+        }).not.toThrow();
+    });
 })
