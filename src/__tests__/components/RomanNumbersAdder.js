@@ -1,4 +1,4 @@
-import {cleanup, render} from "@testing-library/react";
+import {cleanup, fireEvent, render} from "@testing-library/react";
 import React from "react";
 import RomanNumbersAdder from "../../components/RomanNumbersAdder";
 
@@ -21,6 +21,14 @@ describe('<RomanNumbersAdder />', () => {
         const {getByText} = render(<RomanNumbersAdder />)
         expect(() => {
             getByText("Result: none")
+        }).not.toThrow();
+    });
+    it('should show I in result when I entered as first number and second is empty', function () {
+        const {getByLabelText, getByText} = render(<RomanNumbersAdder />)
+        fireEvent.change(getByLabelText(/roman 1/i), {target: {value: "I"}});
+        fireEvent.change(getByLabelText(/roman 2/i), {target: {value: null}});
+        expect(() => {
+            getByText("Result: I")
         }).not.toThrow();
     });
 })
